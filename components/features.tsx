@@ -16,7 +16,7 @@ export default function Features() {
       icon: Shield,
       title: t("Péče o biotopy", "Habitat Care"),
       description: t(
-        "Pravidelně se staráme o lesy, louky, mokřady a další cenné biotopy v regionu. Vytváříme a udržujeme ekosystémy prospěšné pro ohrožené druhy rostlin a živočichů.",
+        "TESTPravidelně se staráme o lesy, louky, mokřady a další cenné biotopy v regionu. Vytváříme a udržujeme ekosystémy prospěšné pro ohrožené druhy rostlin a živočichů.",
         "We regularly care for forests, meadows, wetlands and other valuable habitats in the region. We create and maintain ecosystems beneficial for endangered plant and animal species.",
       ),
       image: "/images/nature-reserve.jpg",
