@@ -32,8 +32,11 @@ export default function ProjectsView() {
     },
     {
       icon: Sprout,
-      title: t("Zabranování zarůstání", "Preventing Overgrowth"),
-      description: t("Ruční seč a údržba lučních porostů.", "Manual mowing and meadow maintenance."),
+      title: t("Zabraňování zarůstání", "Preventing Overgrowth"),
+      description: t(
+        "Ruční seč, hrabání a odvoz trávy z lučních porostů.",
+        "Manual mowing, raking and hauling away grass from the meadows.",
+      ),
       status: t("Probíhá", "Active"),
     },
     {
@@ -45,7 +48,10 @@ export default function ProjectsView() {
     {
       icon: Droplet,
       title: t("Správa Rudoltičky", "Rudoltička Stream Management"),
-      description: t("Údržba revitalizovaného mokřadního toku Rudoltičky.", "Management of revitalized wetland stream."),
+      description: t(
+        "Údržba revitalizovaného mokřadního toku — zalévání výsadeb, částečné vyžínání a likvidace pcháče osetu.",
+        "Management of the revitalized wetland stream — watering plantings, partial scything and creeping thistle control.",
+      ),
       status: t("Probíhá", "Active"),
     },
     {
@@ -69,7 +75,10 @@ export default function ProjectsView() {
     {
       icon: TreeDeciduous,
       title: t("Výsadba doprovodných dřevin", "Companion Tree Planting"),
-      description: t("Výsadba původních dřevin pro obnovu ekosystémů.", "Planting native trees for ecosystem restoration."),
+      description: t(
+        "Výsadba původních dřevin pro obnovu ekosystémů a jejich zalévání v období sucha.",
+        "Planting native trees for ecosystem restoration and watering them during dry spells.",
+      ),
       status: t("Probíhá", "Active"),
     },
     {
@@ -87,7 +96,10 @@ export default function ProjectsView() {
     {
       icon: Shield,
       title: t("Boj s invazivními rostlinami", "Invasive Species Control"),
-      description: t("Odstranění invazivních druhů jako turanky kanadské.", "Removal of invasive species such as Canada goldenrod."),
+      description: t(
+        "Odstraňování turanky kanadské a likvidace karanténního pcháče osetu podél cest.",
+        "Removal of Canadian horseweed and control of quarantine creeping thistle along the paths.",
+      ),
       status: t("Probíhá", "Active"),
     },
     {
@@ -100,6 +112,13 @@ export default function ProjectsView() {
 
   const completedProjects = [
     {
+      title: t("Bobří hráz a nový olšový mokřad", "Beaver Dam and New Alder Wetland"),
+      subtitle: t(
+        "Tento projekt není náš — postavili ho bobři. Dole po potoce u bývalé bobří hráze vybudovali novou velkou hráz a vznikl tak zhruba půlhektarový mokřad, který zadržel obrovské množství vody. Při jarním tání ledu stála hladina metr nad úrovní potoka. Z původně běžného lesa se letos stal olšový mokřad, kde roste populace všeho, co má rádo vodu.",
+        "This project isn't ours — beavers built it. Downstream near the former beaver dam they constructed a large new dam, creating a roughly half-hectare wetland that holds back an enormous amount of water. During the spring thaw the water level stood a metre above the stream. What used to be ordinary forest has turned into an alder wetland this year, with growing populations of everything that loves water.",
+      ),
+    },
+    {
       title: t("Projekty 2023", "2023 Projects"),
       subtitle: t(
         "4 tůně v PR U kaštánku, hráz s tůní v PP U vodárny, výsadba lesa zvláštního určení vč. následné péče, vyčištění louky u Bendova rybníku od kušiny.",
@@ -110,7 +129,7 @@ export default function ProjectsView() {
       title: t("Sezóna 2025", "Season 2025"),
       subtitle: t(
         "Ruční seč cca 18ha vč. úklidu, pasení cca 10ha prvním rokem na Kaštánku, dokončená revitalizace potoka Rudoltička, příprava vodních ploch pro hnízdění ptactva, boj s turankou kanadskou, rákosem a třtinou. Volně žijící mufloni cca 8ks na Kaštánku.",
-        "Manual mowing of ~18ha incl. cleanup, grazing ~10ha first year at Kaštánek, completed Rudoltička stream revitalization, water body preparation for bird nesting, control of Canadian goldenrod, reeds and cane. Free-living mouflon ~8 individuals at Kaštánek.",
+        "Manual mowing of ~18ha incl. cleanup, grazing ~10ha first year at Kaštánek, completed Rudoltička stream revitalization, water body preparation for bird nesting, control of Canadian horseweed, reeds and small-reed. Free-living mouflon ~8 individuals at Kaštánek.",
       ),
     },
     {
