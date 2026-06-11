@@ -15,6 +15,7 @@ export const SITE = {
   bankAccount: "236201335 / 0300",
   instagram: "https://www.instagram.com/csoptrosecnici",
   instagramHandle: "@csoptrosecnici",
+  facebook: "https://www.facebook.com/profile.php?id=61588011491377",
   locality: "Ostrov u Lanškrouna",
   region: "Pardubický kraj",
   postalCode: "561 22",
@@ -46,7 +47,7 @@ export function organizationSchema(): JsonLdObject {
       addressCountry: SITE.country,
     },
     areaServed: { "@type": "Place", name: "Ostrov u Lanškrouna, Lanškrounsko" },
-    sameAs: [SITE.instagram],
+    sameAs: [SITE.instagram, SITE.facebook].filter(Boolean),
     knowsAbout: [
       "ochrana přírody",
       "biodiverzita",

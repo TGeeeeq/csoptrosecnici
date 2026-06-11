@@ -49,8 +49,8 @@ export default function LocationsView() {
       title: t("VKP U osady", "U osady Significant Landscape Element"),
       badge: t("spoj LBK 1 a 2, EVSK", "connection LBK 1 and 2, EVSK"),
       description: t(
-        "Tato lokalita zahrnuje listnaté lesíky a křovinaté stráně s významnými druhy jako mochna stříbrná a krvavec. Je důležitým refugiem pro subtermofilní biotu a podporuje vysokou biodiverzitu. Výskyt druhy: hrušeň polnička, bradáček vejčitý, prvosenka jarní, žluva hajní.",
-        "This site includes deciduous forests and shrubby slopes with significant species such as silverweed and burnet. It is an important refuge for sub-thermophilic biota and supports high biodiversity. Species occurrence: wild pear, oval sedge, primrose, and wood avens.",
+        "Tato lokalita zahrnuje listnaté lesíky a křovinaté stráně s významnými druhy, jako je krvavec toten — živná rostlina modráska bahenního a modráska očkovaného. Je důležitým refugiem pro subtermofilní biotu a podporuje vysokou biodiverzitu. Výskyt druhů: hrušeň polnička, bradáček vejčitý, prvosenka jarní, žluva hajní.",
+        "This site includes deciduous groves and shrubby slopes with significant species such as great burnet — the host plant of the dusky large blue and scarce large blue butterflies. It is an important refuge for sub-thermophilic biota and supports high biodiversity. Species occurrence: wild pear, common twayblade, cowslip, and golden oriole.",
       ),
     },
     {
