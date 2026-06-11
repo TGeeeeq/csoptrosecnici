@@ -8,6 +8,7 @@ import Footer from "@/components/footer"
 import { LanguageProvider } from "@/components/language-provider"
 import { MotionProvider } from "@/components/motion/motion-provider"
 import { ScrollProgress } from "@/components/motion/scroll-progress"
+import { ScrollToTop } from "@/components/scroll-to-top"
 import { BackToTop } from "@/components/motion/back-to-top"
 import { JsonLd } from "@/components/json-ld"
 import { Toaster } from "@/components/ui/sonner"
@@ -96,11 +97,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="cs" suppressHydrationWarning className="scroll-smooth">
+    <html lang="cs" suppressHydrationWarning>
       <body className={`${inter.variable} ${crimsonPro.variable} font-sans antialiased`}>
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <LanguageProvider>
           <MotionProvider>
+            <ScrollToTop />
             <ScrollProgress />
             <Navigation />
             <main>{children}</main>

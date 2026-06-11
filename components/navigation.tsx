@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
 import { AnimatePresence, m } from "motion/react"
@@ -13,6 +14,7 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const { language, setLanguage, t } = useLanguage()
+  const pathname = usePathname()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
@@ -32,9 +34,11 @@ export default function Navigation() {
     { href: "/contact", label: t("Kontakt", "Contact") },
   ]
 
-  const handleNavClick = () => {
+  // Při přechodu na jinou stránku scroll resetuje <ScrollToTop /> v layoutu;
+  // plynule skrolujeme jen při kliknutí na odkaz stránky, na které už jsme.
+  const handleNavClick = (href: string) => {
     setIsOpen(false)
-    window.scrollTo({ top: 0, behavior: "smooth" })
+    if (href === pathname) window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
   return (
@@ -47,7 +51,7 @@ export default function Navigation() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className={cn("flex items-center justify-between transition-all duration-300", scrolled ? "h-14" : "h-16")}>
           {/* Logo */}
-          <Link href="/" className="group flex items-center gap-2 transition-opacity hover:opacity-90" onClick={handleNavClick}>
+          <Link href="/" className="group flex items-center gap-2 transition-opacity hover:opacity-90" onClick={() => handleNavClick("/")}>
             <Image
               src="/images/logo.png"
               alt="ČSOP Trosečníci logo"
@@ -65,7 +69,7 @@ export default function Navigation() {
                 key={item.href}
                 href={item.href}
                 className="group relative rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
-                onClick={handleNavClick}
+                onClick={() => handleNavClick(item.href)}
               >
                 {item.label}
                 <span className="absolute inset-x-3 -bottom-px h-0.5 origin-left scale-x-0 rounded-full bg-primary transition-transform duration-300 group-hover:scale-x-100" />
@@ -114,7 +118,7 @@ export default function Navigation() {
                   key={item.href}
                   href={item.href}
                   className="block rounded-md px-3 py-2 text-base font-medium text-foreground/80 transition-colors hover:bg-accent hover:text-primary"
-                  onClick={handleNavClick}
+                  onClick={() => handleNavClick(item.href)}
                 >
                   {item.label}
                 </Link>
