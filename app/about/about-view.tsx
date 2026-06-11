@@ -54,8 +54,8 @@ export default function AboutView() {
             <Reveal>
               <div className="relative aspect-video overflow-hidden rounded-xl bg-muted shadow-lg">
                 <Image
-                  src="/images/highland-cattle.JPEG"
-                  alt={t("Skotský náhorní skot na pastvině", "Highland cattle grazing on a pasture")}
+                  src="/images/volunteers.jpg"
+                  alt={t("Dobrovolníci při senoseči na louce", "Volunteers haymaking on a meadow")}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transition-transform duration-700 hover:scale-105"

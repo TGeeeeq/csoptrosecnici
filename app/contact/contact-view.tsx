@@ -43,7 +43,7 @@ export default function ContactView() {
               <div className="relative aspect-video overflow-hidden rounded-xl bg-muted shadow-lg">
                 <Image
                   src="/images/kontakt.png"
-                  alt={t("Ostrovská příroda", "Ostrov nature")}
+                  alt={t("Náš psí parťák na posečené louce", "Our dog companion on a mown meadow")}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover transition-transform duration-700 hover:scale-105"

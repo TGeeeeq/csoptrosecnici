@@ -168,8 +168,8 @@ export default function ProjectsView() {
           <Reveal className="mb-12">
             <div className="relative aspect-video overflow-hidden rounded-xl bg-muted shadow-lg">
               <Image
-                src="/images/projekty.jpg"
-                alt={t("Přírodní rezervace – projekty Trosečníků", "Nature reserve – Trosečníci projects")}
+                src="/images/wetland-restoration.jpg"
+                alt={t("Obnovený olšový mokřad", "Restored alder wetland")}
                 fill
                 sizes="(max-width: 1024px) 100vw, 80rem"
                 className="object-cover transition-transform duration-700 hover:scale-105"
