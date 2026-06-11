@@ -72,15 +72,9 @@ export default function Features() {
     <section className="bg-background py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-16 text-center">
-          <h2 className="mb-4 text-balance font-serif text-4xl font-bold lg:text-5xl">
+          <h2 className="text-balance font-serif text-4xl font-bold lg:text-5xl">
             <GradientText>{t("Naše hlavní aktivity", "Our Main Activities")}</GradientText>
           </h2>
-          <p className="mx-auto max-w-3xl text-pretty text-lg text-muted-foreground">
-            {t(
-              "Věnujeme se podpoře biodiverzity a zachování rázu ostrovské přírody prostřednictvím různorodých aktivit a projektů.",
-              "We are dedicated to supporting biodiversity and preserving the character of Ostrov's nature through diverse activities and projects.",
-            )}
-          </p>
         </Reveal>
 
         <Stagger className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
