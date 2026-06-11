@@ -120,8 +120,8 @@ export default function AboutView() {
                     <div className="prose prose-sm max-w-none space-y-3 text-muted-foreground">
                       <p className="text-pretty leading-relaxed">
                         {t(
-                          "Předsedkyně Tereza je redaktorka Ostrovského zpravodaje a řeší smlouvy s AOPK. David s dobrovolníky a Daniel dělají praktickou část v terénu. Jarmila spravuje kasu, Honza pozoruje ptáky, René odborně radí ze zálohy a paní starostka je taky super.",
-                          "President Tereza is the editor of the Ostrov newsletter and handles contracts with AOPK. David with volunteers and Daniel do the practical field work. Jarmila manages the finances, Honza observes birds, René provides expert advice from the background, and Mrs. Mayor is also great.",
+                          "Předsedkyně Tereza je redaktorka Ostrovského zpravodaje a řeší smlouvy s AOPK. David s dobrovolníky a Daniel dělají praktickou část v terénu. Jarmila spravuje kasu, Honza pozoruje ptáky, Eliška radí ze zálohy, Anička jako aktivní dobrovolnice aktivně pomáhá a snaží se a paní starostka je taky super. Občas se přidá a o naši činnost se zajímá i hodně dalších nových mladých lidí a zájemců.",
+                          "President Tereza is the editor of the Ostrov newsletter and handles contracts with AOPK. David with volunteers and Daniel do the practical field work. Jarmila manages the finances, Honza observes birds, Eliška provides advice from the background, Anička is an active volunteer who pitches in and gives it her best, and Mrs. Mayor is also great. Many other new young people and interested folks also join in from time to time and take an interest in our work.",
                         )}
                       </p>
                       <p className="text-pretty leading-relaxed">
