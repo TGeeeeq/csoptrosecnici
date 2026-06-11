@@ -44,7 +44,10 @@ export default function KarelView() {
     <>
       <PageHeader
         title={t("O Karlu Málkovi", "About Karel Málek")}
-        subtitle={t("Výjimečný ochránce přírody ostrovské kotliny", "Exceptional protector of nature in the Ostrov basin")}
+        subtitle={t(
+          "Zakladatel ZO ČSOP Trosečníci, praktický ochránce přírody a krajiny Ostrova u Lanškrouna",
+          "Founder of ČSOP Trosečníci, practical protector of the nature and landscape of Ostrov u Lanškrouna",
+        )}
       />
 
       <section className="py-16">
@@ -59,11 +62,16 @@ export default function KarelView() {
                     <div className="mb-2 text-4xl text-primary/20">&ldquo;</div>
                     <blockquote className="mb-2 text-pretty italic leading-relaxed text-foreground/90">
                       {t(
-                        "Skutečný ochránce přírody nepotřebuje akademické tituly, ale srdce, které cítí každý strom, každou bylinu.",
-                        "A true nature conservationist doesn't need academic titles, but a heart that feels every tree, every herb.",
+                        "Dělám to přece pro přírodu svého Rodného kraje a jsem už zvyklý vydělávat si pouze fyzickou prací. Za průzkumy a projekty bych si stejně žádné peníze nevzal.",
+                        "I do it for the nature of my native region, and I'm used to making my living by physical work alone. I wouldn't take any money for the surveys and projects anyway.",
                       )}
                     </blockquote>
-                    <cite className="text-sm font-semibold not-italic text-foreground">- Karel Málek</cite>
+                    <cite className="text-sm font-semibold not-italic text-foreground">
+                      {t(
+                        "— Karel Málek, Obnova ekologické stability krajiny v katastru Ostrova u Lanškrouna",
+                        "— Karel Málek, Restoration of Ecological Stability of the Landscape in the Cadastre of Ostrov u Lanškrouna",
+                      )}
+                    </cite>
                   </div>
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-xl bg-muted shadow-lg">
@@ -84,8 +92,8 @@ export default function KarelView() {
             <div className="space-y-4 leading-relaxed text-muted-foreground">
               <p className="text-pretty">
                 {t(
-                  "Karel Málek byl výjimečný ochránce přírody, jehož život byl hluboce spjatý s ostrovskou kotlinou. Navzdory systémovým překážkám zasvětil svůj život ochraně místní krajiny a dokázal to, co málokdo v ČR v rámci revitalizace přírody.",
-                  "Karel Málek was an exceptional nature conservationist whose life was deeply connected to the Ostrov basin. Despite systemic obstacles, he dedicated his life to protecting the local landscape and accomplished what few in the Czech Republic have achieved in nature revitalization.",
+                  "Karel Málek se narodil v roce 1958 v Ostrově u Lanškrouna v podhůří Orlických hor a prožil zde téměř celý život. Od devadesátých let se soustavně věnoval praktické ochraně přírody a obnově ekologické stability krajiny v katastru obce, převážně vlastními silami a bez nároku na odměnu.",
+                  "Karel Málek was born in 1958 in Ostrov u Lanškrouna, in the foothills of the Orlické Mountains, and spent nearly his whole life there. From the 1990s onwards he devoted himself systematically to practical nature conservation and to restoring the ecological stability of the landscape in the village cadastre, working largely on his own and without payment.",
                 )}
               </p>
               <p className="text-pretty">
@@ -115,8 +123,8 @@ export default function KarelView() {
                 </p>
                 <p className="text-pretty">
                   {t(
-                    "Charlie ukazoval, že skutečný ochránce přírody nepotřebuje akademické tituly, ale srdce, které cítí každý strom, každou bylinu. Jeho odkaz zůstává živým svědectvím toho, jak jedna výjimečná osobnost může změnit pohled na ochranu místního ekosystému.",
-                    "Charlie showed that a true nature conservationist doesn't need academic titles, but a heart that feels every tree, every herb. His legacy remains a living testament to how one exceptional personality can change the perspective on protecting the local ecosystem.",
+                    "V biologii a ekologii byl samouk bez akademického titulu, jeho znalosti však uznávali i odborníci, s nimiž spolupracoval — mimo jiné při botanické inventarizaci patnácti lokalit Ostrovské kotliny. Své celoživotní zkušenosti shrnul v knize Obnova ekologické stability krajiny v katastru Ostrova u Lanškrouna.",
+                    "He was self-taught in biology and ecology and held no academic degree, yet his knowledge was respected by the experts he worked with — among other things during the botanical inventory of fifteen sites in the Ostrov basin. He summarised his lifelong experience in the book Restoration of Ecological Stability of the Landscape in the Cadastre of Ostrov u Lanškrouna.",
                   )}
                 </p>
               </div>
