@@ -114,6 +114,27 @@ export default function ProjectsView() {
       ),
     },
     {
+      title: t("Management biotopů ÚSES", "ÚSES Biotope Management"),
+      subtitle: t(
+        "Každoroční management biotopů územního systému ekologické stability (ÚSES). Při péči o lokality průběžně poznáváme a nacházíme nové druhy.",
+        "Annual management of biotopes within the Territorial System of Ecological Stability (ÚSES). While caring for the sites we keep discovering and recording new species.",
+      ),
+    },
+    {
+      title: t("Výsadba smíšené aleje", "Mixed Tree Alley Planting"),
+      subtitle: t(
+        "Výsadba 600 metrů smíšené aleje podél cesty směrem k VKP Bendův rybník.",
+        "Planting of a 600-metre mixed tree alley along the road towards the Bendův rybník Significant Landscape Element.",
+      ),
+    },
+    {
+      title: t("Výřez křovin na Kaštánku", "Shrub Clearing at Kaštánek"),
+      subtitle: t(
+        "Výřez křovin v PR U Kaštánku jako opatření proti zarůstání cenných ploch.",
+        "Shrub clearing at the U Kaštánku Nature Reserve as a measure against overgrowth of valuable habitats.",
+      ),
+    },
+    {
       title: t("Informační tabule", "Information Boards"),
       subtitle: t("Instalace 2021", "Installed 2021"),
     },
