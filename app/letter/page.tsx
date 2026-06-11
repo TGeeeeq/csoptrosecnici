@@ -6,11 +6,11 @@ import { breadcrumbSchema } from "@/lib/seo"
 export const metadata: Metadata = {
   title: "Charlieho dopis",
   description:
-    "Poslední vzkaz Karla Málka pro budoucí generace ochránců přírody ostrovské kotliny — osobní dopis a duchovní odkaz ČSOP Trosečníci.",
+    "Poslední vzkaz Karla Málka pro další generace — dopis, kterým si přál, aby péče o přírodu ostrovské kotliny pokračovala.",
   alternates: { canonical: "/letter" },
   openGraph: {
     title: "Charlieho dopis | ČSOP Trosečníci",
-    description: "Poslední vzkaz Karla Málka pro budoucí generace.",
+    description: "Poslední vzkaz Karla Málka pro další generace.",
     url: "/letter",
     type: "article",
   },

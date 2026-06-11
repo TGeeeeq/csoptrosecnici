@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Mail, Landmark, ZoomInIcon, Users, Heart, Instagram } from "lucide-react"
+import { Mail, Landmark, ZoomInIcon, Users, Heart, Instagram, Facebook } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { useLanguage } from "@/components/language-provider"
 import { PageHeader } from "@/components/page-header"
@@ -89,6 +89,20 @@ export default function ContactView() {
                     <div>
                       <h3 className="mb-1 font-serif text-xl font-bold">Instagram</h3>
                       <span className="text-muted-foreground transition-colors hover:text-primary">{SITE.instagramHandle}</span>
+                    </div>
+                  </a>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-primary/30 shadow-md transition-all hover:border-primary/50 hover:shadow-xl">
+                <CardContent className="p-6">
+                  <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4">
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-[#1877F2] text-white">
+                      <Facebook className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <h3 className="mb-1 font-serif text-xl font-bold">Facebook</h3>
+                      <span className="text-muted-foreground transition-colors hover:text-primary">{SITE.name}</span>
                     </div>
                   </a>
                 </CardContent>

@@ -47,7 +47,7 @@ export default function LetterView() {
     <>
       <PageHeader
         title={t("Charlieho dopis", "Charlie's Letter")}
-        subtitle={t("Poslední vzkaz Karla Málka pro budoucí generace", "Karel Málek's final message for future generations")}
+        subtitle={t("Poslední vzkaz Karla Málka pro další generace", "Karel Málek's last message for the next generations")}
       />
 
       <section className="py-16">
@@ -66,8 +66,8 @@ export default function LetterView() {
               <div className="md:sticky md:top-24">
                 <p className="text-pretty leading-relaxed text-muted-foreground">
                   {t(
-                    'Tento dopis napsal Karel Málek "Charlie" krátce před svým odchodem. Je to jeho osobní vzkaz všem, kteří pokračují v ochraně přírody ostrovské kotliny. Dopis byl nalezen mezi jeho osobními věcmi a stal se duchovním odkazem naší organizace.',
-                    'This letter was written by Karel Málek "Charlie" shortly before his departure. It is his personal message to all who continue to protect the nature of the Ostrov basin. The letter was found among his personal belongings and became the spiritual legacy of our organization.',
+                    "Dopis, který Karel Málek „Charlie“ napsal svým kamarádům jako vyjádření přání, aby péče o ostrovskou přírodu pokračovala i v dalších generacích.",
+                    "A letter Karel Málek “Charlie” wrote to his friends, expressing his wish that the care for the Ostrov nature continues in the next generations.",
                   )}
                 </p>
               </div>
@@ -110,13 +110,6 @@ export default function LetterView() {
 
           <Reveal>
             <div className="rounded-xl border border-border bg-accent/20 p-8">
-              <h2 className="mb-4 font-serif text-3xl font-bold">{t("Charlieho odkaz žije dál", "Charlie's Legacy Lives On")}</h2>
-              <p className="mb-6 text-pretty leading-relaxed text-muted-foreground">
-                {t(
-                  "Tento dopis se stal naším průvodcem a inspirací. Charlieho slova nás provázejí při každé naší činnosti a připomínají nám, proč je naše práce tak důležitá. Jeho vize zelené ostrovské kotliny se stala naším závazkem vůči budoucím generacím.",
-                  "This letter has become our guide and inspiration. Charlie's words accompany us in all our activities and remind us why our work is so important. His vision of a green Ostrov basin has become our commitment to future generations.",
-                )}
-              </p>
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Button asChild variant="outline" className="btn-shine">
                   <Link href="/karel">
