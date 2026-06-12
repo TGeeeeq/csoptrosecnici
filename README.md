@@ -4,6 +4,8 @@ Web základní organizace **ZO ČSOP Trosečníci** (ochrana přírody, Ostrov u
 
 Postaveno na **Next.js 16 (App Router) + React 19 + Tailwind CSS v4 + shadcn/ui**, animace pomocí **motion**. Web je dvojjazyčný (čeština/angličtina, přepínač v navigaci).
 
+> 📝 **Chceš jen upravit text, fotku nebo projekt?** Přečti si **[NAVOD-UPRAVY.md](NAVOD-UPRAVY.md)** — seznam, kde co na webu najdeš a jak to změnit přímo na GitHubu bez programování.
+
 ## Lokální vývoj
 
 ```bash
@@ -28,17 +30,17 @@ Mediální soubory nejsou součástí repozitáře (jsou velké) — nahrajte je
 
 ## Kontaktní formulář
 
-Formulář (`/contact`) odesílá přes serverový route handler `app/api/contact/route.ts`. Nastavte **jeden** klíč v proměnných prostředí (viz `.env.example`):
+Formulář (`/contact`) odesílá **přímo z prohlížeče na Web3Forms** — free plán Web3Forms server-side volání nepovoluje. Klíč je v `.env`:
 
-- **`WEB3FORMS_ACCESS_KEY`** — doporučeno, zdarma, bez ověřování domény ([web3forms.com](https://web3forms.com)).
-- **`RESEND_API_KEY`** — alternativa s lepší doručitelností (vyžaduje ověření domény).
+- **`NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`** — klíč z [web3forms.com](https://web3forms.com); je veřejný záměrně (vkládá se do stránky při buildu). **Příjemce zpráv je navázaný na klíč v dashboardu Web3Forms, ne v kódu.**
+- **`RESEND_API_KEY`** — záložní serverová cesta přes `app/api/contact/route.ts` (vyžaduje ověření domény).
 
-Bez klíče formulář funguje v „degradovaném" režimu — nabídne návštěvníkovi přímý e-mail `csoptrosecnici@seznam.cz` (e-mail i číslo účtu jsou na stránce vždy viditelné). Proti spamu je nasazen honeypot a serverová validace.
+Bez klíče formulář funguje v „degradovaném" režimu — nabídne návštěvníkovi přímý e-mail. Proti spamu je nasazen honeypot; serverová route má navíc rate limit, kontrolu originu a limit velikosti požadavku.
 
 ## Nasazení na Vercel
 
 1. Propojte tento GitHub repozitář s projektem na [Vercel](https://vercel.com) (Framework: Next.js — detekuje se automaticky).
-2. Ve **Project → Settings → Environment Variables** přidejte klíč pro formulář (`WEB3FORMS_ACCESS_KEY`).
+2. Klíč formuláře (`NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`) se čte z commitnutého `.env` při buildu — ve Vercelu není potřeba nic nastavovat.
 3. Vercel nasazuje automaticky při každém pushi. Produkční web jede z produkční větve (`main`).
 
 ### Doména `csoptrosecnici.cz` (registrovaná u Wedosu)
