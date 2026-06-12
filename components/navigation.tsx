@@ -41,6 +41,9 @@ export default function Navigation() {
     if (href === pathname) window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`)
+
   return (
     <nav
       className={cn(
@@ -68,11 +71,20 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="group relative rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+                aria-current={isActive(item.href) ? "page" : undefined}
+                className={cn(
+                  "group relative rounded-md px-3 py-2 text-sm font-medium transition-colors hover:text-primary",
+                  isActive(item.href) ? "text-primary" : "text-foreground/80",
+                )}
                 onClick={() => handleNavClick(item.href)}
               >
                 {item.label}
-                <span className="absolute inset-x-3 -bottom-px h-0.5 origin-left scale-x-0 rounded-full bg-primary transition-transform duration-300 group-hover:scale-x-100" />
+                <span
+                  className={cn(
+                    "absolute inset-x-3 -bottom-px h-0.5 origin-left rounded-full bg-primary transition-transform duration-300 group-hover:scale-x-100",
+                    isActive(item.href) ? "scale-x-100" : "scale-x-0",
+                  )}
+                />
               </Link>
             ))}
             <Button
@@ -117,9 +129,15 @@ export default function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block rounded-md px-3 py-2 text-base font-medium text-foreground/80 transition-colors hover:bg-accent hover:text-primary"
+                  aria-current={isActive(item.href) ? "page" : undefined}
+                  className={cn(
+                    "block rounded-md px-3 py-2 text-base font-medium transition-colors hover:bg-accent hover:text-primary",
+                    isActive(item.href)
+                      ? "bg-accent font-semibold text-primary"
+                      : "text-foreground/80",
+                  )}
                   onClick={() => handleNavClick(item.href)}
-                >
+>
                   {item.label}
                 </Link>
               ))}
