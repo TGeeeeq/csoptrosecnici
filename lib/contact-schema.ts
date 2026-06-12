@@ -17,6 +17,7 @@ export function buildContactSchema(t: Translate) {
     email: z
       .string()
       .trim()
+      .max(200, t("E-mail je příliš dlouhý.", "Email is too long."))
       .email(t("Zadejte platnou e-mailovou adresu.", "Please enter a valid email address.")),
     message: z
       .string()

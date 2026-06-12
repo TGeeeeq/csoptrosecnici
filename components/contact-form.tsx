@@ -35,6 +35,10 @@ export function ContactForm() {
       if (res.ok && data.ok) {
         toast.success(t("Zpráva byla odeslána. Děkujeme!", "Your message has been sent. Thank you!"))
         form.reset()
+      } else if (res.status === 429) {
+        toast.error(
+          t("Odeslali jste příliš mnoho zpráv najednou. Zkuste to prosím za pár minut.", "You've sent too many messages at once. Please try again in a few minutes."),
+        )
       } else if (res.status === 503 || data.degraded) {
         toast.message(t("Formulář zatím není napojen na e-mail.", "The form is not connected to email yet."), {
           description: t(
