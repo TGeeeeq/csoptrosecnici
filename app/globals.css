@@ -283,3 +283,106 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* ===== 404 — pustý ostrov ===== */
+@keyframes island-palm-sway {
+  0%,
+  100% {
+    transform: rotate(-2.5deg);
+  }
+  50% {
+    transform: rotate(2.5deg);
+  }
+}
+
+@keyframes island-wave-drift {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-90px);
+  }
+}
+
+@keyframes island-bottle-bob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-8deg);
+  }
+  50% {
+    transform: translateY(7px) rotate(6deg);
+  }
+}
+
+@keyframes island-cloud-drift {
+  0% {
+    transform: translateX(-40px);
+  }
+  100% {
+    transform: translateX(640px);
+  }
+}
+
+@keyframes island-sun-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+}
+
+@keyframes island-bird-glide {
+  0% {
+    transform: translate(-60px, 12px);
+  }
+  100% {
+    transform: translate(660px, -28px);
+  }
+}
+
+@keyframes island-sign-swing {
+  0%,
+  100% {
+    transform: rotate(-1.2deg);
+  }
+  50% {
+    transform: rotate(1.2deg);
+  }
+}
+
+.island-palm {
+  transform-origin: 318px 252px;
+  animation: island-palm-sway 5.5s ease-in-out infinite;
+}
+.island-wave-back {
+  animation: island-wave-drift 11s linear infinite;
+}
+.island-wave-front {
+  animation: island-wave-drift 7s linear infinite reverse;
+}
+.island-bottle {
+  transform-origin: 120px 300px;
+  animation: island-bottle-bob 4.5s ease-in-out infinite;
+}
+.island-cloud-1 {
+  animation: island-cloud-drift 52s linear infinite;
+}
+.island-cloud-2 {
+  animation: island-cloud-drift 70s linear infinite;
+  animation-delay: -30s;
+}
+.island-sun {
+  transform-origin: 500px 80px;
+  animation: island-sun-breathe 6s ease-in-out infinite;
+}
+.island-bird {
+  animation: island-bird-glide 34s linear infinite;
+}
+.island-sign {
+  transform-origin: 432px 268px;
+  animation: island-sign-swing 4s ease-in-out infinite;
+}
