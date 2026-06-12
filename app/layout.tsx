@@ -74,6 +74,11 @@ export const metadata: Metadata = {
     title: "ČSOP Trosečníci",
     description: SITE.description,
   },
+  verification: {
+    other: {
+      "seznam-wmt": "VpzWkCEeYFA8kqXy97kzkxwqbt8he8u4",
+    },
+  },
   robots: {
     index: true,
     follow: true,
