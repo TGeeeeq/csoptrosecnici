@@ -11,6 +11,7 @@ import { ScrollProgress } from "@/components/motion/scroll-progress"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { BackToTop } from "@/components/motion/back-to-top"
 import { JsonLd } from "@/components/json-ld"
+import { CookieBanner } from "@/components/cookie-banner"
 import { Toaster } from "@/components/ui/sonner"
 import { SITE, organizationSchema, websiteSchema } from "@/lib/seo"
 
@@ -108,6 +109,7 @@ export default function RootLayout({
             <main>{children}</main>
             <Footer />
             <BackToTop />
+            <CookieBanner />
           </MotionProvider>
         </LanguageProvider>
         <Toaster richColors position="top-center" />

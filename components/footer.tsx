@@ -57,6 +57,14 @@ export default function Footer() {
               )}
             </p>
             <p className="mt-5 text-xs tracking-wide text-white/40">{t("IČO 64772390", "Company ID 64772390")}</p>
+            <p className="mt-2 text-xs leading-relaxed text-white/40">
+              <Link href="/projects#financovani" className="underline-offset-4 transition-colors hover:text-white/70 hover:underline">
+                {t(
+                  "Péči o krajinu financuje Program péče o krajinu MŽP se spolufinancováním SFŽP ČR a obce Ostrov.",
+                  "Landscape care is funded by the Ministry of the Environment's Landscape Management Programme, co-financed by the State Environmental Fund and the municipality of Ostrov.",
+                )}
+              </Link>
+            </p>
           </StaggerItem>
 
           {/* Navigace */}
@@ -162,7 +170,10 @@ export default function Footer() {
         {/* spodní lišta */}
         <div className="flex flex-col items-center justify-between gap-3 border-t border-white/10 py-6 text-xs text-white/45 sm:flex-row">
           <p>
-            © {new Date().getFullYear()} ZO ČSOP Trosečníci. {t("Všechna práva vyhrazena.", "All rights reserved.")}
+            © {new Date().getFullYear()} ZO ČSOP Trosečníci. {t("Všechna práva vyhrazena.", "All rights reserved.")}{" "}
+            <Link href="/privacy" className="underline-offset-4 transition-colors hover:text-white/80 hover:underline">
+              {t("Ochrana osobních údajů", "Privacy policy")}
+            </Link>
           </p>
           <p className="inline-flex items-center gap-2">
             <Leaf className="animate-leaf-sway h-3.5 w-3.5 text-emerald-300/80" />

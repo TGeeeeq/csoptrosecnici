@@ -12,6 +12,8 @@ import {
   Mountain,
   Trash2,
   Shield,
+  Landmark,
+  ExternalLink,
 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -159,6 +161,30 @@ export default function ProjectsView() {
     },
   ]
 
+  const fundingLogos = [
+    {
+      src: "/images/logo-mzp.png",
+      alt: t("Logo Ministerstva životního prostředí", "Logo of the Ministry of the Environment"),
+      href: "https://mzp.gov.cz",
+      width: 840,
+      height: 360,
+    },
+    {
+      src: "/images/logo-sfzp.png",
+      alt: t("Logo Státního fondu životního prostředí ČR", "Logo of the State Environmental Fund of the Czech Republic"),
+      href: "https://sfzp.gov.cz",
+      width: 1313,
+      height: 360,
+    },
+    {
+      src: "/images/logo-aopk.png",
+      alt: t("Logo Agentury ochrany přírody a krajiny ČR", "Logo of the Nature Conservation Agency of the Czech Republic"),
+      href: "https://nature.cz",
+      width: 638,
+      height: 360,
+    },
+  ]
+
   return (
     <>
       <PageHeader title={t("Naše Projekty", "Our Projects")} subtitle={t("Aktuální činnost v terénu", "Current fieldwork")} />
@@ -222,6 +248,73 @@ export default function ProjectsView() {
                 </StaggerItem>
               ))}
             </Stagger>
+          </div>
+
+          {/* Financování + povinná publicita PPK (loga dle grafických manuálů AOPK ČR a NPŽP) */}
+          <div id="financovani" className="mt-16 scroll-mt-24">
+            <Reveal>
+              <h2 className="mb-8 font-serif text-3xl font-bold">{t("Financování", "Funding")}</h2>
+            </Reveal>
+            <Reveal>
+              <Card className="border-2 border-primary/30 shadow-md">
+                <CardContent className="p-6 sm:p-8">
+                  <div className="mb-6 flex items-start gap-4">
+                    <div className="rounded-lg bg-primary/10 p-3">
+                      <Landmark className="h-6 w-6 text-primary" />
+                    </div>
+                    <div className="space-y-3 leading-relaxed text-muted-foreground">
+                      <p>
+                        {t(
+                          "Obnova a péče o ekosystémy a krajinu, kterou na našich lokalitách provádíme — seč a pastva, péče o tůně a mokřady, výsadby dřevin i likvidace invazních druhů — je hrazena z Programu péče o krajinu (PPK) Ministerstva životního prostředí, který administruje Agentura ochrany přírody a krajiny ČR.",
+                          "The restoration and care of ecosystems and the landscape that we carry out at our sites — mowing and grazing, pond and wetland care, tree planting and invasive species control — is funded by the Landscape Management Programme (PPK) of the Czech Ministry of the Environment, administered by the Nature Conservation Agency of the Czech Republic.",
+                        )}
+                      </p>
+                      <p>
+                        {t(
+                          "Od roku 2026 jsou projekty programu spolufinancovány Státním fondem životního prostředí ČR. Část nákladů na péči o krajinu hradí také obec Ostrov, která na ni má vyčleněné prostředky ve svém rozpočtu.",
+                          "Since 2026, the programme's projects have been co-financed by the State Environmental Fund of the Czech Republic. Part of the landscape care costs is also covered by the municipality of Ostrov, which sets aside funds for it in its budget.",
+                        )}
+                      </p>
+                      <p className="font-medium text-foreground">
+                        {t(
+                          "Tento projekt je spolufinancován Státním fondem životního prostředí ČR na základě rozhodnutí ministra životního prostředí.",
+                          "This project is co-financed by the State Environmental Fund of the Czech Republic based on a decision of the Minister of the Environment.",
+                        )}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Bílý podklad a velkorysé odstupy = ochranná zóna log dle manuálů */}
+                  <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 rounded-xl border border-border bg-white px-8 py-10">
+                    {fundingLogos.map((logo) => (
+                      <a key={logo.src} href={logo.href} target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
+                        <Image
+                          src={logo.src}
+                          alt={logo.alt}
+                          width={logo.width}
+                          height={logo.height}
+                          className="h-12 w-auto sm:h-14"
+                        />
+                      </a>
+                    ))}
+                  </div>
+
+                  <p className="mt-4 text-sm text-muted-foreground">
+                    {t("Více o programu na", "More about the programme at")}{" "}
+                    <a
+                      href="https://dotace.aopk.gov.cz/ppk"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 font-medium text-primary underline-offset-4 hover:underline"
+                    >
+                      dotace.aopk.gov.cz/ppk
+                      <ExternalLink className="h-3.5 w-3.5" />
+                    </a>
+                    . {t("Loga jsou použita v souladu s grafickými manuály AOPK ČR a Národního programu Životní prostředí.", "The logos are used in accordance with the graphic manuals of the Nature Conservation Agency and the National Environment Programme.")}
+                  </p>
+                </CardContent>
+              </Card>
+            </Reveal>
           </div>
         </div>
       </section>
