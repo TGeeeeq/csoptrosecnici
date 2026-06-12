@@ -76,35 +76,14 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: true })
   }
 
-  const web3formsKey = process.env.WEB3FORMS_ACCESS_KEY
+  // Web3Forms se odesílá přímo z prohlížeče (components/contact-form.tsx) —
+  // free plán server-side volání nepovoluje. Tahle route je záložní cesta.
   const resendKey = process.env.RESEND_API_KEY
 
   const subject = `Zpráva z webu od ${name}`
   const text = `Jméno: ${name}\nE-mail: ${email}\n\n${message}`
 
-  // 1) Web3Forms (doporučená cesta – stačí access key, bez ověřování domény)
-  if (web3formsKey) {
-    try {
-      const r = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          access_key: web3formsKey,
-          subject,
-          from_name: `${name} (web ČSOP Trosečníci)`,
-          replyto: email,
-          message: text,
-        }),
-      })
-      const data = (await r.json().catch(() => ({}))) as { success?: boolean }
-      if (!r.ok || !data.success) throw new Error("web3forms_failed")
-      return NextResponse.json({ ok: true })
-    } catch {
-      return NextResponse.json({ ok: false, error: "send_failed" }, { status: 502 })
-    }
-  }
-
-  // 2) Resend (vyžaduje ověřenou odesílací doménu)
+  // Resend (vyžaduje ověřenou odesílací doménu)
   if (resendKey) {
     try {
       const r = await fetch("https://api.resend.com/emails", {
@@ -125,6 +104,6 @@ export async function POST(req: Request) {
     }
   }
 
-  // 3) Žádný klíč není nastaven → degradovaný režim (UI nabídne přímý e-mail).
+  // Žádný klíč není nastaven → degradovaný režim (UI nabídne přímý e-mail).
   return NextResponse.json({ ok: false, degraded: true }, { status: 503 })
 }

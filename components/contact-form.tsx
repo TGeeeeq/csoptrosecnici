@@ -12,6 +12,11 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useLanguage } from "@/components/language-provider"
 import { buildContactSchema, type ContactInput } from "@/lib/contact-schema"
 
+// Web3Forms na free plánu povoluje odesílání pouze z prohlížeče (server-side
+// vyžaduje Pro plán), proto se zprávy posílají přímo odsud. Klíč je veřejný
+// záměrně — určuje jen to, na který ověřený e-mail zpráva dorazí.
+const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
+
 export function ContactForm() {
   const { t } = useLanguage()
   const [submitting, setSubmitting] = useState(false)
@@ -25,6 +30,39 @@ export function ContactForm() {
   async function onSubmit(values: ContactInput) {
     setSubmitting(true)
     try {
+      // Honeypot: bota odbavíme falešným úspěchem bez odeslání.
+      if (values.website && values.website.trim().length > 0) {
+        toast.success(t("Zpráva byla odeslána. Děkujeme!", "Your message has been sent. Thank you!"))
+        form.reset()
+        return
+      }
+
+      if (WEB3FORMS_KEY) {
+        const name = values.name.replace(/[\r\n]+/g, " ")
+        const res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({
+            access_key: WEB3FORMS_KEY,
+            subject: `Zpráva z webu od ${name}`,
+            from_name: `${name} (web ČSOP Trosečníci)`,
+            name,
+            email: values.email,
+            replyto: values.email,
+            message: values.message,
+          }),
+        })
+        const data = (await res.json().catch(() => ({}))) as { success?: boolean }
+        if (res.ok && data.success) {
+          toast.success(t("Zpráva byla odeslána. Děkujeme!", "Your message has been sent. Thank you!"))
+          form.reset()
+        } else {
+          toast.error(t("Zprávu se nepodařilo odeslat. Zkuste to prosím znovu.", "Could not send the message. Please try again."))
+        }
+        return
+      }
+
+      // Záložní cesta přes náš server (Resend), případně degradovaný režim.
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
