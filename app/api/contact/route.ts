@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server"
 import { contactServerSchema } from "@/lib/contact-schema"
 
-const RECIPIENT = "csoptrosecnici@seznam.cz"
+const RECIPIENT = "david.hmira@csoptrosecnici.cz"
 
 export async function POST(req: Request) {
   let body: unknown
