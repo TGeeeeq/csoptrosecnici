@@ -180,6 +180,34 @@ export default function Footer() {
             {t("S láskou k přírodě Ostrovské kotliny", "With love for the nature of the Ostrov basin")}
           </p>
         </div>
+
+        {/* podpis tvůrce webu */}
+        <div className="flex justify-center border-t border-white/10 py-5">
+          <a
+            href="https://www.antoninfigueroa.cz"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Web vytvořil Antonín Figueroa"
+            className="group inline-flex items-center gap-2.5 text-xs text-white/40 transition-colors duration-300 hover:text-white/75"
+          >
+            <span className="overflow-hidden rounded-full ring-1 ring-white/10 transition-all duration-300 group-hover:ring-amber-300/40">
+              <Image
+                src="/images/af-logo-dark.svg"
+                alt="Antonín Figueroa"
+                width={24}
+                height={24}
+                className="h-6 w-6 transition-transform duration-500 group-hover:scale-110"
+              />
+            </span>
+            <span className="tracking-wide">
+              {t("Web vytvořil", "Website by")}{" "}
+              <span className="font-medium text-white/55 transition-colors group-hover:text-amber-200/90">
+                Antonín Figueroa
+              </span>
+            </span>
+            <ArrowUpRight className="h-3.5 w-3.5 -translate-x-1 text-amber-300/0 transition-all duration-300 group-hover:translate-x-0 group-hover:text-amber-300/80" />
+          </a>
+        </div>
       </div>
     </footer>
   )

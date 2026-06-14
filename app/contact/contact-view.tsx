@@ -58,8 +58,8 @@ export default function ContactView() {
                     </div>
                     <div>
                       <h3 className="mb-1 font-serif text-xl font-bold">Email</h3>
-                      <a href="mailto:csoptrosecnici@seznam.cz" className="text-muted-foreground transition-colors hover:text-primary">
-                        csoptrosecnici@seznam.cz
+                      <a href="mailto:david.hmira@csoptrosecnici.cz" className="text-muted-foreground transition-colors hover:text-primary">
+                        david.hmira@csoptrosecnici.cz
                       </a>
                     </div>
                   </div>
