@@ -386,3 +386,29 @@
   transform-origin: 432px 268px;
   animation: island-sign-swing 4s ease-in-out infinite;
 }
+
+/* AF signature — orbiting rings on the creator-credit monogram.
+   transform-box: view-box keeps the centre at the SVG viewBox centre (50,50). */
+.af-spin-slow,
+.af-spin-rev {
+  transform-box: view-box;
+  transform-origin: 50% 50%;
+}
+@keyframes af-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes af-spin-rev {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .af-spin-slow {
+    animation: af-spin 34s linear infinite;
+  }
+  .af-spin-rev {
+    animation: af-spin-rev 27s linear infinite;
+  }
+}

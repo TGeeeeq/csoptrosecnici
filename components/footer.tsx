@@ -3,6 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Leaf, Mail, MapPin, Landmark, Instagram, Facebook, ArrowUpRight, HandHeart } from "lucide-react"
+import AFLogo from "./af-logo"
 import { useLanguage } from "./language-provider"
 import { SITE } from "@/lib/seo"
 import { Stagger, StaggerItem } from "@/components/motion/stagger"
@@ -190,15 +191,10 @@ export default function Footer() {
             aria-label="Web vytvořil Antonín Figueroa"
             className="group inline-flex items-center gap-2.5 text-xs text-white/40 transition-colors duration-300 hover:text-white/75"
           >
-            <span className="overflow-hidden rounded-full ring-1 ring-white/10 transition-all duration-300 group-hover:ring-amber-300/40">
-              <Image
-                src="/images/af-logo-dark.svg"
-                alt="Antonín Figueroa"
-                width={24}
-                height={24}
-                className="h-6 w-6 transition-transform duration-500 group-hover:scale-110"
-              />
-            </span>
+            <AFLogo
+              size={28}
+              className="ring-1 ring-[#d4a45a]/20 transition duration-500 ease-out group-hover:scale-105 group-hover:ring-[#d4a45a]/45 group-hover:shadow-[0_0_22px_rgba(212,164,90,0.28)]"
+            />
             <span className="tracking-wide">
               {t("Web vytvořil", "Website by")}{" "}
               <span className="font-medium text-white/55 transition-colors group-hover:text-amber-200/90">
