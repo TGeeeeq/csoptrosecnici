@@ -68,7 +68,7 @@ export default function StudioView() {
 
   const loadSample = async () => {
     try {
-      const res = await fetch("/karusel/ukazka-invazni-druhy.json")
+      const res = await fetch("/karusel/byliny-vetrelci.json")
       if (!res.ok) throw new Error()
       loadJsonText(await res.text())
     } catch {

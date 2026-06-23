@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "topic": "Byliny-vetřelci",
+  "format": "4:5",
+  "theme": "forest",
+  "fontScale": 1,
+  "align": "left",
+  "branding": { "csopLogo": true, "publicita": false },
+  "slides": [
+    {
+      "type": "cover",
+      "eyebrow": "Víte, že…",
+      "title": "Vetřelci, které musíme hubit. A přece v sobě mají sílu.",
+      "subtitle": "Čtyři rostliny z české krajiny, které je nutné potlačovat — a přitom po staletí slouží jako bylinky."
+    },
+    {
+      "type": "fact",
+      "eyebrow": "Proč je hubíme",
+      "title": "Jedny zákon, druhé agronomie",
+      "body": "Křídlatka a zlatobýl jsou na unijním seznamu invazních druhů (nařízení EU č. 1143/2014, u nás přes zákon č. 114/1992 Sb.) — pěstovat se nesmí a je povinnost je odstraňovat. Pcháč a turanka nejsou „cizinci\" ze seznamu, ale houževnaté plevele, které se podle pravidel péče o pozemky musí potlačovat, aby se nešířily dál."
+    },
+    {
+      "type": "plant",
+      "status": "Přemnožený plevel",
+      "name": "Pcháč oset",
+      "latin": "Cirsium arvense",
+      "fact": "Domácí, ale neúnavný polní plevel s kořeny do několika metrů. Z jednoho kořenového úlomku obroste celé pole, proto se musí soustavně potlačovat, aby nepřerostl na sousední pozemky.",
+      "use": "Mladé oloupané stonky i kořeny jsou jedlé a fialové květy patří k nejvydatnější pastvě pro motýly a včely.",
+      "warning": null
+    },
+    {
+      "type": "plant",
+      "status": "Invazní druh — unijní seznam",
+      "name": "Křídlatka japonská",
+      "latin": "Reynoutria japonica",
+      "fact": "Za den vyroste i o 10 cm a prorůstá asfaltem i základy domů. Likviduje se opakovaně, klidně několik let v řadě, jinak se z drobného úlomku obnoví.",
+      "use": "Mladé jarní výhonky chutnají podobně jako reveň a kořen je v tradiční medicíně ceněným zdrojem resveratrolu.",
+      "warning": null
+    },
+    {
+      "type": "plant",
+      "status": "Invazní nepůvodní druh",
+      "name": "Turanka kanadská",
+      "latin": "Conyza canadensis",
+      "fact": "Drobná jednoletka ze Severní Ameriky, která jediná vytvoří až 200 tisíc semen rozfoukaných větrem. Rychle zaplevelí strniště, úhory i okraje cest a bývá odolná vůči herbicidům.",
+      "use": "V lidovém léčitelství platí za močopudnou a protizánětlivou bylinu — užívala se při dně, revmatu i potížích trávení.",
+      "warning": null
+    },
+    {
+      "type": "plant",
+      "status": "Invazní druh — unijní seznam",
+      "name": "Zlatobýl kanadský",
+      "latin": "Solidago canadensis",
+      "fact": "Jediná rostlina vytvoří desítky tisíc semen a souvislé žluté porosty, kam už se jiné byliny nedostanou. Patří na unijní seznam a je nutné ho odstraňovat.",
+      "use": "Tradiční bylina na ledviny a močové cesty a zároveň vydatná pozdně letní medonosná rostlina.",
+      "warning": null
+    },
+    {
+      "type": "outro",
+      "eyebrow": "Závěr",
+      "title": "Hubit, ale s rozumem",
+      "body": "Sběr „na talíř\" nikdy nenahradí odbornou likvidaci — u invazních druhů na rostlinný materiál pozor, ať ho dál nešíříme. Pomáhejme přírodě zodpovědně.",
+      "cta": "Sledujte ČSOP Trosečníci"
+    }
+  ],
+  "captions": [
+    {
+      "label": "Varianta A — edukativní",
+      "text": "🌿 Čtyři rostliny, které musíme hubit — a přitom v sobě skrývají překvapivou sílu.\n\nPcháč oset, křídlatka japonská, turanka kanadská i zlatobýl kanadský vytlačují naši původní přírodu nebo zaplevelují krajinu, a tak je nutné je potlačovat. Zároveň ale po staletí slouží jako bylinky, medonosné rostliny i jídlo.\n\nKterou z nich jste potkali ve svém okolí? 👇",
+      "hashtags": ["#csoptrosecnici", "#ochranaprirody", "#invaznidruhy", "#priroda", "#biodiverzita", "#bylinky", "#lanskrounsko", "#kridlatka", "#ekologie", "#trosecnici"]
+    },
+    {
+      "label": "Varianta B — vyprávěcí",
+      "text": "Přišli zdaleka nebo se přemnožili — a dnes je hubíme. 🌱\n\nKřídlatku a zlatobýl k nám zavlekli pro krásu a včely, turanka připlula sama přes oceán a pcháč prostě nikdy neodešel z polí. Příroda i pravidla péče dnes velí: potlačovat. A přesto z nich umí být reveňová pochoutka, med i léčivý čaj.\n\nMáme rádi příběhy se dvěma tvářemi. A vy? 🍃",
+      "hashtags": ["#csoptrosecnici", "#priroda", "#invaznirostliny", "#bylinky", "#med", "#ceskapriroda", "#ochranaprirody", "#biodiverzita", "#lanskrounsko"]
+    },
+    {
+      "label": "Varianta C — výzva k akci",
+      "text": "💚 Chcete pomoct české přírodě? Začněte u vetřelců.\n\nInvazní druhy jako křídlatka nebo zlatobýl se musí odstraňovat — a vy se můžete přidat k našim brigádám. Naučíme vás je poznat i bezpečně likvidovat, aby se rostlinný materiál dál nešířil.\n\nNapište nám do zpráv a vyrazte s ČSOP Trosečníci do terénu! 🌿",
+      "hashtags": ["#csoptrosecnici", "#dobrovolnictvi", "#ochranaprirody", "#invaznidruhy", "#priroda", "#brigada", "#lanskrounsko", "#biodiverzita", "#pomocprirode", "#ekologie"]
+    }
+  ]
+}
