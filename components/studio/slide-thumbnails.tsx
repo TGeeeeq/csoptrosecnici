@@ -91,6 +91,7 @@ function typeLabel(type: string): string {
       fact: "Zajímavost",
       tip: "Tip",
       outro: "Závěr",
+      photo: "Fotografie",
     }[type] ?? type
   )
 }

@@ -29,6 +29,11 @@
       "warning": null
     },
     {
+      "type": "photo",
+      "imageData": "",
+      "imageCaption": "Pcháč oset (Cirsium arvense)"
+    },
+    {
       "type": "plant",
       "status": "Invazní druh — unijní seznam",
       "name": "Křídlatka japonská",
@@ -36,6 +41,11 @@
       "fact": "Za den vyroste i o 10 cm a prorůstá asfaltem i základy domů. Likviduje se opakovaně, klidně několik let v řadě, jinak se z drobného úlomku obnoví.",
       "use": "Mladé jarní výhonky chutnají podobně jako reveň a kořen je v tradiční medicíně ceněným zdrojem resveratrolu.",
       "warning": null
+    },
+    {
+      "type": "photo",
+      "imageData": "",
+      "imageCaption": "Křídlatka japonská (Reynoutria japonica)"
     },
     {
       "type": "plant",
@@ -47,6 +57,11 @@
       "warning": null
     },
     {
+      "type": "photo",
+      "imageData": "",
+      "imageCaption": "Turanka kanadská (Conyza canadensis)"
+    },
+    {
       "type": "plant",
       "status": "Invazní druh — unijní seznam",
       "name": "Zlatobýl kanadský",
@@ -54,6 +69,11 @@
       "fact": "Jediná rostlina vytvoří desítky tisíc semen a souvislé žluté porosty, kam už se jiné byliny nedostanou. Patří na unijní seznam a je nutné ho odstraňovat.",
       "use": "Tradiční bylina na ledviny a močové cesty a zároveň vydatná pozdně letní medonosná rostlina.",
       "warning": null
+    },
+    {
+      "type": "photo",
+      "imageData": "",
+      "imageCaption": "Zlatobýl kanadský (Solidago canadensis)"
     },
     {
       "type": "outro",

@@ -40,6 +40,7 @@ Viz `public/karusel/ukazka-invazni-druhy.json`. Zkrácený přehled:
       "fact": "...", "use": "...", "warning": null },
     { "type": "fact",  "eyebrow": "...", "title": "...", "body": "..." },
     { "type": "tip",   "eyebrow": "Tip", "title": "...", "body": "..." },
+    { "type": "photo", "imageData": "", "imageCaption": "Popisek pod fotkou" },
     { "type": "outro", "title": "...", "body": "...", "cta": "..." }
   ],
   "captions": [
@@ -50,6 +51,14 @@ Viz `public/karusel/ukazka-invazni-druhy.json`. Zkrácený přehled:
 
 Chybějící pole se doplní výchozí hodnotou — ruční úpravy JSON tedy nahrávání
 nerozbijí.
+
+### Foto-slajdy
+
+Slajd typu `photo` zobrazí fotografii v herbářové kartičce s popiskem. JSON ho
+nese s prázdným `imageData` (placeholder „Nahrajte fotografii"); samotnou fotku
+nahrajete až ve studiu — v editoru slajdu zvolte typ **Fotografie** a tlačítkem
+vyberte obrázek (JPG/PNG). Fotka se uloží přímo do karuselu a vykreslí se i do
+exportu. `imageCaption` je text pod fotkou.
 
 ## Zapnutí přímého publikování na Instagram (volitelné)
 

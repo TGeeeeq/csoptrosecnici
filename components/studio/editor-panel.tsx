@@ -19,6 +19,7 @@ const TYPE_LABELS: Record<SlideType, string> = {
   fact: "Zajímavost",
   tip: "Tip",
   outro: "Závěr / výzva",
+  photo: "Fotografie",
 }
 
 /** Která pole se zobrazují pro který typ slajdu. */
@@ -28,6 +29,7 @@ const FIELDS: Record<SlideType, (keyof Slide)[]> = {
   fact: ["eyebrow", "title", "body"],
   tip: ["eyebrow", "title", "body"],
   outro: ["eyebrow", "title", "body", "cta"],
+  photo: ["imageData", "imageCaption"],
 }
 
 const LABELS: Partial<Record<keyof Slide, string>> = {
@@ -42,6 +44,8 @@ const LABELS: Partial<Record<keyof Slide, string>> = {
   use: "K čemu je dobrá?",
   warning: "Bezpečnostní varování",
   cta: "Výzva k akci (tlačítko)",
+  imageData: "Fotografie",
+  imageCaption: "Popisek fotky",
 }
 
 const MULTILINE: (keyof Slide)[] = ["subtitle", "body", "fact", "use", "warning"]
@@ -76,6 +80,51 @@ export function EditorPanel({
       {fields.map((field) => {
         const value = (slide[field] as string | null) ?? ""
         const isWarning = field === "warning"
+
+        if (field === "imageData") {
+          return (
+            <div key={field} className="space-y-2">
+              <Label>{LABELS[field] ?? field}</Label>
+              {value ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={value}
+                  alt="Náhled fotky"
+                  className="h-40 w-full rounded-md border object-cover"
+                />
+              ) : (
+                <p className="text-xs text-muted-foreground">
+                  Nahrajte fotografii (JPG / PNG). Uloží se přímo do karuselu a exportuje se do obrázku.
+                </p>
+              )}
+              <div className="flex items-center gap-2">
+                <Input
+                  type="file"
+                  accept="image/*"
+                  className="cursor-pointer"
+                  onChange={(e) => {
+                    const file = e.target.files?.[0]
+                    if (!file) return
+                    const reader = new FileReader()
+                    reader.onload = () => onChange({ imageData: reader.result as string })
+                    reader.readAsDataURL(file)
+                    e.target.value = ""
+                  }}
+                />
+                {value ? (
+                  <button
+                    type="button"
+                    className="shrink-0 text-xs text-muted-foreground underline-offset-2 hover:underline"
+                    onClick={() => onChange({ imageData: "" })}
+                  >
+                    Odebrat
+                  </button>
+                ) : null}
+              </div>
+            </div>
+          )
+        }
+
         return (
           <div key={field} className="space-y-2">
             <div className="flex items-center justify-between">

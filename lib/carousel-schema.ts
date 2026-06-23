@@ -17,7 +17,7 @@ export const SLIDE_H = 1350 // formát 4:5
 export const themeSchema = z.enum(["forest", "meadow", "bark"])
 export type Theme = z.infer<typeof themeSchema>
 
-export const slideTypeSchema = z.enum(["cover", "plant", "fact", "tip", "outro"])
+export const slideTypeSchema = z.enum(["cover", "plant", "fact", "tip", "outro", "photo"])
 export type SlideType = z.infer<typeof slideTypeSchema>
 
 export const slideSchema = z.object({
@@ -37,6 +37,9 @@ export const slideSchema = z.object({
   warning: z.string().nullable().catch(null).default(null),
   /** Výzva k akci (outro) */
   cta: z.string().catch("").default(""),
+  /** Pole pro typ „photo": fotka jako base64 data URL + popisek pod ní */
+  imageData: z.string().catch("").default(""),
+  imageCaption: z.string().catch("").default(""),
   /** Zarovnání jen pro tento slajd (přebíjí globální) */
   align: z.enum(["left", "center"]).optional(),
 })

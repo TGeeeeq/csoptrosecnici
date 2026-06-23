@@ -85,6 +85,8 @@ function SlideBody({
       return <FactBody slide={slide} palette={palette} fs={fs} tip />
     case "outro":
       return <OutroBody slide={slide} palette={palette} fs={fs} align={align} />
+    case "photo":
+      return <PhotoBody slide={slide} palette={palette} fs={fs} />
     case "fact":
     default:
       return <FactBody slide={slide} palette={palette} fs={fs} />
@@ -248,6 +250,83 @@ function OutroBody({
         </span>
       ) : null}
     </>
+  )
+}
+
+/** Fotografie v herbářové kartičce (světlá karta, okraj v akcentu, popisek). */
+function PhotoBody({ slide, palette, fs }: { slide: Slide; palette: Palette; fs: number }) {
+  const card = "#f6f1e2"
+  const ink = "#27372a"
+  return (
+    <div
+      style={{
+        width: "100%",
+        maxWidth: 880,
+        alignSelf: "center",
+        background: card,
+        borderRadius: 10,
+        padding: 26,
+        boxShadow: "0 24px 60px rgba(0,0,0,0.35)",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          height: 880,
+          borderRadius: 4,
+          overflow: "hidden",
+          border: `3px solid ${palette.accent}`,
+          background: slide.imageData ? "transparent" : "rgba(39,55,42,0.06)",
+        }}
+      >
+        {slide.imageData ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={slide.imageData}
+            alt={slide.imageCaption || "Fotografie"}
+            style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+          />
+        ) : (
+          <div
+            style={{
+              position: "absolute",
+              inset: 16,
+              border: `3px dashed ${palette.accent}`,
+              borderRadius: 4,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: ink,
+              fontFamily: FONT_SANS,
+              fontSize: 34 * fs,
+              fontWeight: 700,
+              textAlign: "center",
+              opacity: 0.7,
+            }}
+          >
+            Nahrajte fotografii
+          </div>
+        )}
+      </div>
+      {slide.imageCaption ? (
+        <p
+          style={{
+            fontFamily: FONT_SERIF,
+            fontStyle: "italic",
+            fontSize: 40 * fs,
+            lineHeight: 1.3,
+            color: ink,
+            margin: "22px 4px 4px",
+            textAlign: "center",
+          }}
+        >
+          {slide.imageCaption}
+        </p>
+      ) : null}
+    </div>
   )
 }
 
@@ -514,20 +593,9 @@ function Footer({ palette, branding }: { palette: Palette; branding: Branding })
       >
         {branding.csopLogo ? (
           <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
-            <span
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                width: 72,
-                height: 72,
-                borderRadius: 999,
-                background: palette.dark ? "rgba(255,255,255,0.94)" : "#ffffff",
-              }}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/logo.png" alt="ČSOP Trosečníci" style={{ width: 56, height: 56, objectFit: "contain" }} />
-            </span>
+            {/* Samotná nášivka (PNG má průhledné pozadí) — bez bílého kruhu. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/logo.png" alt="ČSOP Trosečníci" style={{ height: 84, objectFit: "contain" }} />
             <span style={{ fontFamily: FONT_SERIF, fontWeight: 600, fontSize: 32, color: palette.text }}>ČSOP Trosečníci</span>
           </div>
         ) : (
@@ -539,11 +607,11 @@ function Footer({ palette, branding }: { palette: Palette; branding: Branding })
             fontFamily: FONT_SANS,
             fontSize: 26,
             fontWeight: 600,
-            letterSpacing: "0.1em",
+            letterSpacing: "0.04em",
             color: palette.muted,
           }}
         >
-          @csoptrosecnici
+          csoptrosecnici.cz
         </span>
       </div>
     </div>
