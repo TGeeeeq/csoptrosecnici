@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "topic": "Invazní a karanténní druhy",
+  "format": "4:5",
+  "theme": "forest",
+  "fontScale": 1,
+  "align": "left",
+  "branding": { "csopLogo": true, "publicita": false },
+  "slides": [
+    {
+      "type": "cover",
+      "eyebrow": "Víte, že…",
+      "title": "Vetřelci, které musíme hubit. A přece léčí.",
+      "subtitle": "Invazní a přemnožené druhy v české přírodě — a k čemu se kupodivu hodí."
+    },
+    {
+      "type": "fact",
+      "eyebrow": "Proč je hubíme",
+      "title": "Zákon to nařizuje",
+      "body": "Invazní nepůvodní druhy vytlačují domácí rostliny i živočichy. Pro druhy na unijním seznamu (nařízení EU č. 1143/2014, u nás přes zákon č. 114/1992 Sb.) platí zákaz pěstování a povinnost je odstraňovat."
+    },
+    {
+      "type": "plant",
+      "status": "Invazní druh — unijní seznam",
+      "name": "Křídlatka japonská",
+      "latin": "Reynoutria japonica",
+      "fact": "Za den vyroste i o 10 cm, prorůstá asfaltem i základy domů. Likviduje se opakovaně, klidně několik let v řadě.",
+      "use": "Mladé jarní výhonky chutnají podobně jako reveň a kořen je v tradiční medicíně ceněným zdrojem resveratrolu.",
+      "warning": null
+    },
+    {
+      "type": "plant",
+      "status": "Invazní druh — unijní seznam",
+      "name": "Netýkavka žláznatá",
+      "latin": "Impatiens glandulifera",
+      "fact": "K nám se dostala jako okrasná medonosná rostlina. Dnes lemuje břehy potoků a dusí původní květenu.",
+      "use": "Vynikající pozdně letní pastva pro včely; zralá semena jsou jedlá a mají jemně oříškovou chuť.",
+      "warning": null
+    },
+    {
+      "type": "plant",
+      "status": "Invazní druh — unijní seznam",
+      "name": "Zlatobýl kanadský",
+      "latin": "Solidago canadensis",
+      "fact": "Jediná rostlina vytvoří desítky tisíc semen a souvislé porosty, kam už se jiné byliny nedostanou.",
+      "use": "Tradiční bylina na ledviny a močové cesty a zároveň vydatná medonosná rostlina.",
+      "warning": null
+    },
+    {
+      "type": "plant",
+      "status": "Přemnožený plevel",
+      "name": "Pcháč oset",
+      "latin": "Cirsium arvense",
+      "fact": "Není to cizinec, ale houževnatý polní plevel s hlubokými kořeny. Podle pravidel rostlinolékařské péče se musí potlačovat, aby se nešířil na sousední pozemky.",
+      "use": "Mladé oloupané stonky i kořeny jsou jedlé a jeho květy jsou vydatnou pastvou pro motýly a včely.",
+      "warning": null
+    },
+    {
+      "type": "plant",
+      "status": "Invazní druh — nebezpečný",
+      "name": "Bolševník velkolepý",
+      "latin": "Heracleum mantegazzianum",
+      "fact": "Až čtyři metry vysoký obr z Kavkazu. Je na unijním seznamu a jeho likvidace je povinná.",
+      "use": "Z květů vzniká hojný med — rostlinu samotnou ale nikdy nesbírejte.",
+      "warning": "Šťáva v kombinaci se slunečním zářením způsobuje těžké popáleniny a puchýře. Nedotýkejte se jí holou kůží a hubení přenechte odborníkům s ochrannými pomůckami."
+    },
+    {
+      "type": "outro",
+      "eyebrow": "Závěr",
+      "title": "Hubit, ale s rozumem",
+      "body": "Sběr „na talíř\" nikdy nenahradí odbornou likvidaci — a u jedovatých druhů hrozí zranění. Pomáhejme přírodě zodpovědně.",
+      "cta": "Sledujte ČSOP Trosečníci"
+    }
+  ],
+  "captions": [
+    {
+      "label": "Varianta A — edukativní",
+      "text": "🌿 Invazní vetřelci, které musíme ze zákona hubit — a přitom v sobě skrývají překvapivou sílu.\n\nKřídlatka, netýkavka, zlatobýl i přemnožený pcháč oset vytlačují naši původní přírodu, a tak je nutné je potlačovat. Zároveň ale po staletí slouží jako bylinky, medonosné rostliny i jídlo. Pozor na bolševník velkolepý — ten je jedovatý, nikdy se ho nedotýkejte!\n\nKterý z nich jste potkali ve svém okolí? 👇",
+      "hashtags": ["#csoptrosecnici", "#ochranaprirody", "#invaznidruhy", "#priroda", "#biodiverzita", "#bylinky", "#lanskrounsko", "#krídlatka", "#ekologie", "#trosecnici"]
+    },
+    {
+      "label": "Varianta B — vyprávěcí",
+      "text": "Přišli jako okrasa zahrad a dnes je hubíme. 🌱\n\nNetýkavku k nám zavlekli pro krásu a včely, křídlatku pro efekt — a ony se rozutekly po celé krajině. Příroda i zákon dnes velí: odstraňovat. A přesto z nich umí být reveňová pochoutka, med i léčivý čaj.\n\nMáme rádi příběhy se dvěma tvářemi. A vy? 🍃",
+      "hashtags": ["#csoptrosecnici", "#priroda", "#invaznirostliny", "#bylinky", "#med", "#ceskapriroda", "#ochranaprirody", "#biodiverzita", "#lanskrounsko"]
+    },
+    {
+      "label": "Varianta C — výzva k akci",
+      "text": "💚 Chcete pomoct české přírodě? Začněte u vetřelců.\n\nInvazní druhy jako křídlatka nebo zlatobýl se musí odstraňovat — a vy se můžete přidat k našim brigádám. Naučíme vás je poznat i bezpečně likvidovat (bolševníka radši necháme odborníkům 🧤).\n\nNapište nám do zpráv a vyrazte s ČSOP Trosečníci do terénu! 🌿",
+      "hashtags": ["#csoptrosecnici", "#dobrovolnictvi", "#ochranaprirody", "#invaznidruhy", "#priroda", "#brigada", "#lanskrounsko", "#biodiverzita", "#pomocprirode", "#ekologie"]
+    }
+  ]
+}
